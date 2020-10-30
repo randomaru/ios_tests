@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  UITabBarController
+//  UiButton
 //
-//  Created by out-belyayeva-ma on 28.10.2020.
+//  Created by out-belyayeva-ma on 29.10.2020.
 //  Copyright © 2020 out-belyayeva-ma. All rights reserved.
 //
 
@@ -21,19 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        
-        let firstVC = ViewController()
-        let secondVC = SecondViewController()
-        
-        let firstNavController = UINavigationController(rootViewController: firstVC)
-        let secondNavController = UINavigationController(rootViewController: secondVC)
-        
-        let tabBarVC = UITabBarController()
-        tabBarVC.setViewControllers([firstNavController, secondNavController], animated: true)
-        
-        window?.rootViewController = tabBarVC
+        window?.rootViewController = ViewController()
         window?.makeKeyAndVisible()
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
