@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F187E56E255D5706007A5868 /* CatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187E56D255D5706007A5868 /* CatButton.swift */; };
+		F12BFD36256D103200CD36FC /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12BFD35256D103200CD36FC /* Cell.swift */; };
 		F1AFB6A4255C1AA000544C3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AFB6A3255C1AA000544C3E /* AppDelegate.swift */; };
 		F1AFB6A6255C1AA000544C3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AFB6A5255C1AA000544C3E /* SceneDelegate.swift */; };
 		F1AFB6A8255C1AA000544C3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AFB6A7255C1AA000544C3E /* ViewController.swift */; };
@@ -15,6 +15,8 @@
 		F1AFB6B0255C1AA200544C3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AFB6AE255C1AA200544C3E /* LaunchScreen.storyboard */; };
 		F1AFB6BB255C1AA200544C3E /* UIStackViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AFB6BA255C1AA200544C3E /* UIStackViewTests.swift */; };
 		F1AFB6C6255C1AA200544C3E /* UIStackViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AFB6C5255C1AA200544C3E /* UIStackViewUITests.swift */; };
+		F1C9C55A2563B2C8003C6132 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C9C5592563B2C8003C6132 /* TableViewController.swift */; };
+		F1E7DC6A256E735A008217B5 /* BottomSheetRatingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7DC69256E735A008217B5 /* BottomSheetRatingPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F187E56D255D5706007A5868 /* CatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatButton.swift; sourceTree = "<group>"; };
+		F12BFD35256D103200CD36FC /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		F1AFB6A0255C1AA000544C3E /* UIStackView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIStackView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AFB6A3255C1AA000544C3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1AFB6A5255C1AA000544C3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		F1AFB6C1255C1AA200544C3E /* UIStackViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIStackViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AFB6C5255C1AA200544C3E /* UIStackViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewUITests.swift; sourceTree = "<group>"; };
 		F1AFB6C7255C1AA200544C3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1C9C5592563B2C8003C6132 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		F1E7DC69256E735A008217B5 /* BottomSheetRatingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetRatingPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +106,9 @@
 				F1AFB6A3255C1AA000544C3E /* AppDelegate.swift */,
 				F1AFB6A5255C1AA000544C3E /* SceneDelegate.swift */,
 				F1AFB6A7255C1AA000544C3E /* ViewController.swift */,
-				F187E56D255D5706007A5868 /* CatButton.swift */,
+				F1C9C5592563B2C8003C6132 /* TableViewController.swift */,
+				F1E7DC69256E735A008217B5 /* BottomSheetRatingPage.swift */,
+				F12BFD35256D103200CD36FC /* Cell.swift */,
 				F1AFB6AC255C1AA200544C3E /* Assets.xcassets */,
 				F1AFB6AE255C1AA200544C3E /* LaunchScreen.storyboard */,
 				F1AFB6B1255C1AA200544C3E /* Info.plist */,
@@ -257,9 +263,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E7DC6A256E735A008217B5 /* BottomSheetRatingPage.swift in Sources */,
 				F1AFB6A8255C1AA000544C3E /* ViewController.swift in Sources */,
 				F1AFB6A4255C1AA000544C3E /* AppDelegate.swift in Sources */,
-				F187E56E255D5706007A5868 /* CatButton.swift in Sources */,
+				F12BFD36256D103200CD36FC /* Cell.swift in Sources */,
+				F1C9C55A2563B2C8003C6132 /* TableViewController.swift in Sources */,
 				F1AFB6A6255C1AA000544C3E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
