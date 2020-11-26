@@ -24,5 +24,19 @@
       <ContextState
          contextName = "ButtonsRatingFormCell.configureAll():Cell.swift">
       </ContextState>
+      <ContextState
+         contextName = "BottomSheetRatingPage.init(pageIndex:text:target:):BottomSheetRatingPage.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.height">
+            </PersistentString>
+            <PersistentString
+               value = "self.text.intrinsicContentSize.height">
+            </PersistentString>
+            <PersistentString
+               value = "text.height(withConstrainedWidth: self.text.frame.size.width, font: self.text.font)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

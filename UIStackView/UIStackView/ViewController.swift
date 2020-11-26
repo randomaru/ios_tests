@@ -20,7 +20,7 @@ class ViewController: UIViewController {
 						 "fifth",
 						 "sixth"]
 
-		let page = BottomSheetRatingPage(pageIndex: 0, text: questions[2], target: ButtonsRatingFormCell())
+		let page = BottomSheetRatingPage(pageIndex: 0, text: questions[0], target: ButtonsRatingFormCell())
 
 		view.addSubview(page)
 		page.translatesAutoresizingMaskIntoConstraints = false

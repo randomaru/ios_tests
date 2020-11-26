@@ -11,6 +11,8 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
     }
 	
     // MARK: - Table view data source
@@ -22,8 +24,14 @@ class TableViewController: UITableViewController {
 		return 1
     }
 
+	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return UITableView.automaticDimension
+	}
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = ButtonsRatingFormCell()
+//		let cell = ButtonsRatingFormCell()
+		let cell = TestCell()
+		cell.tableView = tableView
 		return cell
     }
 }

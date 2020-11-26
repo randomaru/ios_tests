@@ -13,7 +13,7 @@ final class BottomSheetRatingPage: UIView {
 	let textBackground: UIView = UIView()
 	let text: UILabel = UILabel()
 //	var height: CGFloat = 0
-	var height = NSLayoutDimension()
+	var height: CGFloat = 0
 	let target: ButtonsRatingFormCell
 	var selectedButtonIndex: Int = 0
 
@@ -44,6 +44,15 @@ final class BottomSheetRatingPage: UIView {
 		self.pageIndex = pageIndex
 		self.text.text = text
 		self.target = target
+
+
+		self.text.numberOfLines = 0
+		self.text.textAlignment = .center
+		self.text.frame.size.width = UIScreen.main.bounds.width - Constraints.Question.sideOffset * 2
+		self.text.invalidateIntrinsicContentSize()
+//		self.setTextConstraints()
+		self.height = 12 + text.height(withConstrainedWidth: self.text.frame.size.width, font: self.text.font) + 111
+
 		super.init(frame: .zero)
 		configurePage()
 	}
@@ -56,14 +65,15 @@ final class BottomSheetRatingPage: UIView {
 
 	private func configurePage() {
 		textBackground.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-		text.numberOfLines = 0
-		text.textAlignment = .center
+//		text.numberOfLines = 0
+//		text.textAlignment = .center
 		backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
 
 		setTextConstraints()
 		setTextBackgroundConstraints()
 		setButonsStackView()
-		height = self.heightAnchor
+		self.invalidateIntrinsicContentSize()
+		print(intrinsicContentSize)
 	}
 
 	private func setTextConstraints() {
@@ -162,5 +172,21 @@ extension BottomSheetRatingPage {
 		let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10)]
 		let rectangleHeight = String(text).boundingRect(with: size, options: options, attributes: attributes, context: nil).height
 		return rectangleHeight
+	}
+}
+
+extension String {
+	func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
+		let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+		let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+
+		return ceil(boundingBox.height)
+	}
+
+	func width(withConstrainedHeight height: CGFloat, font: UIFont) -> CGFloat {
+		let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
+		let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+
+		return ceil(boundingBox.width)
 	}
 }
